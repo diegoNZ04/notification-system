@@ -21,6 +21,7 @@
     <ProjectReference Include="..\NotificationSystem.Application\NotificationSystem.Application.csproj" />
     <ProjectReference Include="..\NotificationSystem.Domain\NotificationSystem.Domain.csproj" />
     <ProjectReference Include="..\NotificationSystem.Shared\NotificationSystem.Shared.csproj" />
+    <ProjectReference Include="..\NotificationSystem.Infra\NotificationSystem.Infra.csproj" />
   </ItemGroup>
 
 </Project>
