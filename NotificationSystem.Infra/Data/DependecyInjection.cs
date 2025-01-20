@@ -20,6 +20,7 @@ namespace NotificationSystem.Infra.Data
                 var client = serviceProvider.GetRequiredService<IMongoClient>();
                 return client.GetDatabase(mongoSettings.DatabaseName);
             });
+
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             return services;
