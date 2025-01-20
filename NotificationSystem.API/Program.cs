@@ -1,6 +1,7 @@
 using MassTransit;
 using RabbitMQ.Client;
 using NotificationSystem.Infra.Data;
+using NotificationSystem.Application.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,7 @@ builder.Services.AddMassTransit(x =>
             });
 
             e.SetQueueArgument("x-max-priority", 10);
+            e.ConfigureConsumer<NotificationConsumer>(context);
         });
     });
 });
